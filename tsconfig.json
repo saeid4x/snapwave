@@ -1,4 +1,4 @@
-{
+{  
   "compilerOptions": {
     "target": "es5",
     "lib": [
@@ -6,6 +6,10 @@
       "dom.iterable",
       "esnext"
     ],
+    "baseUrl": "./src",
+    "paths": {
+      "@/*": ["*"]
+    },
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
@@ -23,4 +27,5 @@
   "include": [
     "src"
   ]
+  
 }
