@@ -79,8 +79,8 @@ const PostForm = ({post , action }:PostFormProps) => {
     <form className='flex flex-col gap-9 w-full max-w-5xl' onSubmit={handleSubmit}>
 
         <div className="">
-            <label htmlFor="caption" className="block mb-2 text-sm font-medium text-white dark:text-white">Captio</label>
-            <input type="text"  name="caption"  className='shad-input rounded-md w-full' defaultValue={post?.caption} />                
+            <label htmlFor="caption" className="block mb-2 text-sm font-medium text-white dark:text-white">کپشن پست</label>
+            <input type="text"  name="caption"  className='shad-input rounded-md w-full  px-2' defaultValue={post?.caption} />                
         </div>
 
         {/* <div className="">
@@ -89,7 +89,7 @@ const PostForm = ({post , action }:PostFormProps) => {
         </div> */}
 
         <div className="">
-            <label htmlFor=" " className="block mb-2 text-sm font-medium text-white dark:text-white">Add Photo</label>
+            <label htmlFor=" " className="block mb-2 text-sm font-medium text-white dark:text-white"> افزودن تصویر یا ویدیو</label>
               <FileUploader 
                 fieldChange={HandlePhotoUploadChange}
                 mediaUrl={post?.imageUrl}
@@ -99,24 +99,24 @@ const PostForm = ({post , action }:PostFormProps) => {
 
 
           <div className="">
-            <label htmlFor="location" className="block mb-2 text-sm font-medium text-white dark:text-white">Location </label>
-            <input type="text"  name="location"  className='shad-input rounded-md w-full' defaultValue={post?.location} />                
+            <label htmlFor="location" className="block mb-2 text-sm font-medium text-white dark:text-white">لوکیشن </label>
+            <input type="text"  name="location"  className='shad-input rounded-md w-full px-2' defaultValue={post?.location} />                
           </div>
 
           
           <div className="">
-            <label htmlFor="tags" className="block mb-2 text-sm font-medium text-white dark:text-white">Add Tags (Seperated by comma " , " ) </label>
-            <input type="text"  name="tags"  className='shad-input rounded-md w-full' placeholder='Art, Expression, Learn' defaultValue={post?.tags} />                
+            <label htmlFor="tags" className="block mb-2 text-sm font-medium text-white dark:text-white"> افزودن تگ ( تگ ها را با کاما از یکدیگر جدا کنید)</label>
+            <input type="text"  name="tags"  className='shad-input rounded-md w-full px-2' placeholder='برنامه نویسی , پایگاه داده , بلاکچین , طبیعت' defaultValue={post?.tags} />                
         </div>
 
 
         <div className='flex gap-4 items-center justify-end'>
-            <button type='button' className='p-2 text-center bg-slate-600 text-white rounded-md'>Cancel</button>
-            <button type='submit' className=' p-2 text-center bg-primary-600 text-white rounded-md'
+            <button type='button' className='p-2 px-5 text-center bg-slate-600 text-white rounded-md'>لغو</button>
+            <button type='submit' className=' p-2 px-10 text-center bg-primary-600 text-white rounded-md'
             disabled={isLoadingCreate || isLoadingUpdate}
             > 
             {isLoadingCreate || isLoadingUpdate && 'Loading...'}
-            {action} Post
+            {action === 'Create' ? 'ایجاد' : 'ویرایش'} پست 
             </button>
         </div>
 

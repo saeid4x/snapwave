@@ -82,21 +82,21 @@ const SigninForm = () => {
          <div className='sm:w-420 flex-center flex-col '>
                   <img src="/images/logo.svg" alt="" />
 
-                  <h2 className='h3-bold md:h2-bold pt-5 sm:pt-12 '>Log in to your account</h2>
-                  <p className='text-light-3 small-mediumm md:base-regular'>Welcome back! Please enter your details</p>
+                  <h2 className='h3-bold md:h2-bold pt-5 sm:pt-12 '>ورود به حساب کاربری</h2>
+                  <p className='text-blue-500 small-mediumm md:base-regular mt-5'>خوش آمدید! ، لطفا جزئیات حساب کاربری خود را وارد کنید</p>
 
             <form className='flex flex-col gap-5 w-full mt-4 ' onSubmit={handleSubmit}>
 
               
-              <div className="">
-                <label htmlFor="email" className="block mb-2 text-sm font-medium text-white dark:text-white">Email</label>
-                <Input type="email" name="email"  className='shad-input rounded-md' />                
+              <div className="mt-5">
+                <label htmlFor="email" className="block mb-2 text-sm font-medium text-white dark:text-white">ایمیل</label>
+                <Input type="email" name="email" style={{direction:"ltr"}} className='shad-input rounded-md  px-2' />                
               </div>
 
 
               <div className="">
-                <label htmlFor="password" className="block mb-2 text-sm font-medium text-white dark:text-white">Password</label>
-                <Input type="password" name="password"  className='shad-input rounded-md' />                
+                <label htmlFor="password" className="block mb-2 text-sm font-medium text-white dark:text-white">کلمه  عبور </label>
+                <Input type="password" name="password"  style={{direction:"ltr"}} className='shad-input rounded-md px-2' />                
               </div>
 
              <Button type='submit' className='shad-button_primary rounded-md'>
@@ -105,13 +105,13 @@ const SigninForm = () => {
                   <div className='flex-center gap-2'>
                      <Loader />  Loading...
                   </div>
-                ) : "Sign in"
+                ) : "ورود"
                }
                </Button>
 
-               <p className="text-small-regular tetx-light-2 text-center mt-2 ">
-               Don't have an Account?
-                <Link to="/sign-up" className="text-primary-500 text-small-semibold ml-1 ">Sign Up</Link>
+               <p className="text-small-regular text-light-2 text-center mt-2 ">
+              حساب کاربری ندارید؟  &nbsp;
+                <Link to="/sign-up" className="text-primary-500 text-small-semibold ml-1 ">عضویت در سایت </Link>
                </p>
 
 

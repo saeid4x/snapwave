@@ -1,3 +1,17 @@
+@font-face {
+  font-family: 'iranSans_light';
+  src: url('./fonts/IRAN Sans Light.ttf') format('truetype'),
+       /* url('../fonts/font.woff') format('woff'),
+       url('../fonts/font.ttf') format('truetype'); */
+  /* Add additional font formats if necessary */
+  /* Specify the correct path to the font files */
+}
+
+body {
+  font-family: 'iranSans_light', sans-serif;
+}
+
+
 /* .App {
   text-align: center;
 }

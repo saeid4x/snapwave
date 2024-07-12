@@ -73,40 +73,38 @@ const SignupForm = () => {
 
   }
 
-  useEffect(() => {
-    console.log('signup form ')
-  } , [])
+ 
 
   return (
     <>
          <div className='sm:w-420 flex-center flex-col '>
-                  <img src="/images/logo.svg" alt="" />
+                  <img src="/images/logo.svg" alt="" className="mt-10"/>
 
-                  <h2 className='h3-bold md:h2-bold pt-5 sm:pt-12 '></h2>
-                  <p className='text-light-3 small-mediumm md:base-regular'>To use Snapgram, Please enter your details</p>
+                  <h2 className='h3-bold md:h2-bold sm:pt-12 -mt-5'>عضویت در سایت </h2>
+                  {/* <p className='text-blue-500 small-mediumm md:base-regular mt-4'>برای استفاده از SnapWave لطفا فرم زیر را کامل کنید</p> */}
 
             <form className='flex flex-col gap-5 w-full mt-4 ' onSubmit={handleSubmit}>
 
               <div className="">
-                <label htmlFor="name" className="block mb-2 text-sm font-medium text-white dark:text-white">Name</label>
-                <input type="text"  name="name"  className='shad-input rounded-md' />                
+                <label htmlFor="name" className="block mb-2 text-sm font-medium text-white dark:text-white">نام </label>
+                <input type="text"  name="name"  className='shad-input rounded-md w-full' />                
               </div>
 
 
               <div className="">
-                <label htmlFor="username" className="block mb-2 text-sm font-medium text-white dark:text-white">Username</label>
-                <Input type="text"  name="username"   className='shad-input rounded-md' />                
+                <label htmlFor="username" className="block mb-2 text-sm font-medium text-white dark:text-white">نام کاربری</label>
+                <Input type="text"  name="username"   className='shad-input rounded-md' style={{direction:"ltr"}} />                
               </div>
 
               <div className="">
-                <label htmlFor="email" className="block mb-2 text-sm font-medium text-white dark:text-white">Email</label>
-                <Input type="email" name="email"  className='shad-input rounded-md' />                
+                <label htmlFor="email" className="block mb-2 text-sm font-medium text-white dark:text-white">ایمیل </label>
+                <Input type="email" name="email" style={{direction:"ltr"}}  className='shad-input rounded-md px-2' />                
               </div>
 
 
               <div className="">
-                <label htmlFor="password" className="block mb-2 text-sm font-medium text-white dark:text-white">Password</label>
-                <Input type="password" name="password"  className='shad-input rounded-md' />                
+                <label htmlFor="password" className="block mb-2 text-sm font-medium text-white dark:text-white">کلمه عبور </label>
+                <Input type="password" name="password" style={{direction:"ltr"}}  className='shad-input rounded-md px-2' />                
               </div>
 
              <Button type='submit' className='shad-button_primary rounded-md'>
@@ -115,13 +113,13 @@ const SignupForm = () => {
                   <div className='flex-center gap-2'>
                      <Loader />  Loading...
                   </div>
-                ) : "Sign up"
+                ) : "عضویت"
                }
                </Button>
 
                <p className="text-small-regular tetx-light-2 text-center mt-2 ">
-                Already have an account?
-                <Link to="/sign-in" className="text-primary-500 text-small-semibold ml-1 ">Log in</Link>
+               قبلا حساب کاربری ایجاد کرده اید؟  &nbsp;
+                <Link to="/sign-in" className="text-primary-500 text-small-semibold ml-1 "> ورود به حساب کاربری</Link>
                </p>
 
 

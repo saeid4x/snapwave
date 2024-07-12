@@ -2,27 +2,27 @@ export const sidebarLinks = [
     {
       imgURL: "/icons/home.svg",
       route: "/",
-      label: "Home",
+      label: "صفحه اصلی ",
     },
     {
       imgURL: "/icons/wallpaper.svg",
       route: "/explore",
-      label: "Explore",
+      label: "اکسپلور",
     },
     {
       imgURL: "/icons/people.svg",
       route: "/all-users",
-      label: "People",
+      label: "کاربران",
     },
     {
       imgURL: "/icons/bookmark.svg",
       route: "/saved",
-      label: "Saved",
+      label: "ذخیره شده",
     },
     {
       imgURL: "/icons/gallery-add.svg",
       route: "/create-post",
-      label: "Create Post",
+      label: "ایجاد پست ",
     },
   ];
   
