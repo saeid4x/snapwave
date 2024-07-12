@@ -77,7 +77,7 @@ const PostStats = ({post, userId}: PostStatsProps) => {
         </div>
 
 
-        <div className='flex gap-2  '>
+        <div className='flex gap-2 mr-10 '>
             {
             isSavingPost || isDeletingSavedPost  ? <Loader /> : 
                     <img src={`${isSaved ? "/icons/saved.svg" :"/icons/save.svg" }`}
